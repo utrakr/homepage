@@ -1,4 +1,4 @@
-base_url = "https://www.utrakr.com"
+base_url = "https://www.utrakr.app"
 compile_sass = true
 highlight_code = true
 build_search_index = false
