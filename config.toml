@@ -5,7 +5,7 @@ build_search_index = false
 
 # common
 title = "μtrakr"
-description = "Your micro url creator that helps track usage."
+description = "Your micro url creator that helps track usage. PREVIEW"
 
 [extra]
 copyright = "©2020 μtrakr"
