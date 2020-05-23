@@ -1,0 +1,49 @@
+.o-homeform {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+
+.o-homeform-content {
+  display: flex;
+}
+
+.o-homeform #long-url-form {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.o-homeform i#long-url-paste {
+  cursor: pointer;
+  position: absolute;
+  top: 21px;
+  right: 14px;
+}
+
+.o-homeform #long-url-form button {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  z-index: 1000;
+}
+
+#long-url-input {
+  border-radius: 25px;
+  background: white;
+  border: 1px solid #c3c3c3;
+
+  margin: 5px;
+  padding: 15px 70px 15px 20px;
+  width: 20em;
+  font-size: 1.2em;
+}
+
+@media only screen and (max-width: 400px) {
+  #long-url-input {
+    font-size: 1em;
+    width: 250px;
+  }
+}

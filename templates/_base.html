@@ -1,0 +1,56 @@
+{% import "post_macros.html" as post_macros %}
+
+<!DOCTYPE html>
+<html lang="{{ config.default_language }}">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ config.description }}">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="logos/favicon.png">
+    <meta name="theme-color" content="#ffffff">
+
+    {% block title -%}
+    <title>{{ config.title }}</title>
+    <meta property="og:title" content="{{ config.title }}" />
+    <meta name="twitter:title" content="{{ config.title }}" />
+    {%- endblock title %}
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ get_url(path="base.css") }}" />
+</head>
+<body>
+{% block header -%}
+<header class="l-header">
+    <div class="l-logo">
+        <a href="/">
+            <img alt="{{ config.title }} logo" src="{{ get_url(path="logos/logo_transparent.png")}}" />
+        </a>
+    </div>
+    <nav class="l-nav">
+        <div class="l-nav-item">
+            <a class="github-logo" href="https://github.com/utrakr">
+                <img alt="GitHub Logo" src="img/GitHub-Mark-32px.png" />
+                <span>GitHub</span>
+            </a>
+        </div>
+    </nav>
+</header>
+{%- endblock header %}
+<div class="l-content">
+    {% block content %}
+    {% endblock content %}
+</div>
+<footer class="l-footer">
+    {% block footer -%}
+    <p class="l-copyright">
+        {% if config.extra.copyright -%}
+        {% set content = config.extra.copyright | markdown(inline=true) %}
+        {{ post_macros::polish(content=content) }}
+        {%- endif %}
+    </p>
+    {%- endblock footer %}
+</footer>
+</body>
+</html>

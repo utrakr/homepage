@@ -1,0 +1,12 @@
+base_url = "https://www.utrakr.com"
+compile_sass = true
+highlight_code = true
+build_search_index = false
+
+# common
+title = "μtrakr"
+description = "Your micro url creator that helps track usage."
+
+[extra]
+copyright = "©2020 μtrakr"
+submit_url = "https://l.utrakr.app"

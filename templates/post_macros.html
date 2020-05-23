@@ -1,0 +1,9 @@
+{% macro polish(content) %}
+    {{  content |
+        replace(from=":smile:", to="😄") |
+        replace(from=":+1:", to="👍") |
+        replace(from=":thumbsup:", to="👍") |
+        replace(from=":tada:", to="🎉") |
+        safe
+    }}
+{% endmacro content %}

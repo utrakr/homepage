@@ -1,0 +1,2 @@
+develop:
+    zola serve

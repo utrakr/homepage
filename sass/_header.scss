@@ -1,0 +1,49 @@
+@import "variables";
+
+header.l-header {
+  background-color: $main_color;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+$logo_width: 150px;
+$logo_padding_top: round($logo_width * .01);
+$logo_padding_left: round($logo_width * .05);
+
+header.l-header .l-logo {
+  width: $logo_width - (2*$logo_padding_left);
+  height: $logo_width / 3 + $logo_padding_top;
+  overflow: hidden;
+}
+
+header.l-header .l-logo img {
+  width: $logo_width;
+  overflow: hidden;
+  margin: -($logo_width/3 - $logo_padding_top) 0 -($logo_padding_left) 0;
+}
+
+header.l-header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header.l-header nav .l-nav-item {
+  display: flex;
+  padding: 15px;
+}
+
+header.l-header nav .l-nav-item a {
+  text-decoration: none;
+  color: black;
+}
+
+.github-logo {
+  color: black;
+}
+
+.github-logo img {
+  height: 1.3em;
+  vertical-align: text-bottom;
+}
