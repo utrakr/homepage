@@ -1,2 +1,2 @@
 develop:
-    zola serve
+    zola --config config.local.toml serve

@@ -44,12 +44,7 @@
 </div>
 <footer class="l-footer">
     {% block footer -%}
-    <p class="l-copyright">
-        {% if config.extra.copyright -%}
-        {% set content = config.extra.copyright | markdown(inline=true) %}
-        {{ post_macros::polish(content=content) }}
-        {%- endif %}
-    </p>
+    <p class="l-copyright">©2020 μtrakr</p>
     {%- endblock footer %}
 </footer>
 </body>

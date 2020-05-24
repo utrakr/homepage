@@ -8,4 +8,4 @@ title = "μtrakr"
 description = "Your micro url creator that helps track usage."
 
 [extra]
-submit_url = "https://utrakr.app"
+submit_url = "http://localhost:8080"

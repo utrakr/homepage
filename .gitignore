@@ -1,6 +1,8 @@
 # general
 .DS_Store
 *.iml
+.idea
+.terraform
 
 # zola
 /public/
