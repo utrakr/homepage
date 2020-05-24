@@ -28,3 +28,6 @@ data "terraform_remote_state" "crit_dns" {
 data "google_dns_managed_zone" "root" {
   name = data.terraform_remote_state.crit_dns.outputs["root_zone_name"]
 }
+output "homepage" {
+  value = "https://${trimsuffix(google_dns_record_set.homepage["www"].name, ".")}"
+}
