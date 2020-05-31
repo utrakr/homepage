@@ -3,7 +3,10 @@
 {% block content %}
 <h1>{{config.description}}</h1>
 
+<div id="info-message">&nbsp;</div>
+
 <div class="o-homeform">
+
     <div class="o-homeform-content">
         <form action="{{config.extra.submit_url}}" method="post" id="long-url-form" autocomplete="off">
             <input id="long-url-input" type="text" name="long_url" placeholder="Paste long url."/>
@@ -14,28 +17,5 @@
         </form>
     </div>
 </div>
-
-<script>
-async function fillInClipboard(inputElm, formElm) {
-    const text = await navigator.clipboard.readText();
-    if (text && text.startsWith("http")) {
-        inputElm.value = await navigator.clipboard.readText();
-        formElm.submit();
-    }
-}
-// onload setup event
-(function () {
-    const pasteElm = document.getElementById('long-url-paste');
-    const inputElm = document.getElementById('long-url-input');
-    const formElm = document.getElementById('long-url-form');
-    if (inputElm && pasteElm) {
-        pasteElm.onclick = function (eventTarget) {
-            eventTarget.stopPropagation();
-
-            fillInClipboard(inputElm, formElm)
-        }
-    }
-})()
-</script>
 
 {% endblock content %}

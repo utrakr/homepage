@@ -1,0 +1,16 @@
+#info-message {
+  display: flex;
+  justify-content: center;
+}
+
+#info-message a {
+  color: inherit;
+}
+
+.o-message-success {
+  color: darkgreen;
+}
+
+.o-message-error {
+  color: palevioletred;
+}
