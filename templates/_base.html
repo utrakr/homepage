@@ -46,7 +46,7 @@
 </div>
 <footer class="l-footer">
     {% block footer -%}
-    <p class="l-copyright">©2020 μtrakr</p>
+    <p class="l-copyright">©2020 μtrakr - {{ get_env(name="COMMIT_REF", default="unknown") }}</p>
     {%- endblock footer %}
 </footer>
 </body>
