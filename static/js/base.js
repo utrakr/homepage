@@ -39,20 +39,20 @@ function submitFormData(msgElm, formElm) {
             const murl = data["micro_url"];
             console.info("data", data);
 
-            const i = document.createElement('i');
-            i.className = 'material-icons copy';
-            i.innerText = 'content_paste';
-            i.addEventListener('click', async () => {
-                console.info('add to clipboard', murl)
+            const i = document.createElement("i");
+            i.className = "material-icons copy";
+            i.innerText = "content_paste";
+            i.addEventListener("click", async () => {
+                console.info("add to clipboard", murl);
                 await navigator.clipboard.writeText(murl);
-                i.innerText = 'check';
-            })
-            const span = document.createElement('span');
-            span.className = 'o-message-success';
+                i.innerText = "check";
+            });
+            const span = document.createElement("span");
+            span.className = "o-message-success";
             span.innerHTML = `Your new micro url is <a href="${murl}">${murl}</a> `;
             span.append(i);
 
-            msgElm.innerHTML = '';
+            msgElm.innerHTML = "";
             msgElm.append(span);
         },
         (error) => {
