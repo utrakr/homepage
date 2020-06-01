@@ -11,6 +11,15 @@
   color: darkgreen;
 }
 
+.o-message-success i.copy {
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.o-message-success i.copy:hover {
+  color: black;
+}
+
 .o-message-error {
   color: palevioletred;
 }

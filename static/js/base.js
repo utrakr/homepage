@@ -36,11 +36,28 @@ function submitFormData(msgElm, formElm) {
     sendData(
         formElm,
         (data) => {
+            const murl = data["micro_url"];
             console.info("data", data);
-            msgElm.innerHTML = `<span class="o-message-success">Your new micro url is <a href="${data["micro_url"]}">${data["micro_url"]}</a></span>`;
+
+            const i = document.createElement('i');
+            i.className = 'material-icons copy';
+            i.innerText = 'content_paste';
+            i.addEventListener('click', async () => {
+                console.info('add to clipboard', murl)
+                await navigator.clipboard.writeText(murl);
+                i.innerText = 'check';
+            })
+            const span = document.createElement('span');
+            span.className = 'o-message-success';
+            span.innerHTML = `Your new micro url is <a href="${murl}">${murl}</a> `;
+            span.append(i);
+
+            msgElm.innerHTML = '';
+            msgElm.append(span);
         },
         (error) => {
             console.error("error", error);
+            msgElm.innerHTML = `<span class="o-message-error">Unable to create micro url</span>`;
         }
     );
 }
