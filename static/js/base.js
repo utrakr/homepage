@@ -36,8 +36,8 @@ function submitFormData(msgElm, formElm) {
     sendData(
         formElm,
         (data) => {
-            const murl = data["micro_url"];
             console.info("data", data);
+            const murl = data["data"]["micro_url"];
 
             const i = document.createElement("i");
             i.className = "material-icons copy";
