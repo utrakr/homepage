@@ -6,12 +6,17 @@
 
 .o-homeform-content {
   display: flex;
+  flex-direction: column;
 }
 
-.o-homeform #long-url-form {
+.o-homeform #long-url-form .input-box {
   display: flex;
   justify-content: center;
   position: relative;
+}
+
+.o-homeform-content #signin-message {
+  text-align: center;
 }
 
 .o-homeform i#long-url-paste {

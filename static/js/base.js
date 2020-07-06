@@ -103,3 +103,14 @@ function sendData(form, onSuccess, onError) {
 window.addEventListener("load", function () {
     setup();
 });
+
+window['onSignIn'] = function(user) {
+    const name = user.getBasicProfile().getName();
+    const idToken = user.getAuthResponse().id_token;
+    const sigElm = document.getElementById("signin-message");
+    if (sigElm) {
+        sigElm.innerHTML = `<input type="hidden" name="id_token" value="${idToken}"><span>Signed in as ${name}</span>`
+    } else {
+        console.error("unable to find sig elm");
+    }
+}

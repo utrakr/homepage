@@ -16,6 +16,9 @@
     <meta name="twitter:title" content="{{ config.title }}" />
     {%- endblock title %}
 
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="575736837658-3rchnqr2e36t0io6alck4et327iunlen.apps.googleusercontent.com">
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ get_url(path="base.css") }}" />
@@ -31,6 +34,9 @@
         </a>
     </div>
     <nav class="l-nav">
+        <div class="l-nav-item">
+            <div class="g-signin2" data-theme="dark" data-width="120" data-onsuccess="onSignIn"></div>
+        </div>
         <div class="l-nav-item">
             <a class="github-logo" href="https://github.com/utrakr">
                 <img alt="GitHub Logo" src="img/GitHub-Mark-32px.png" />

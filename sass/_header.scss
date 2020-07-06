@@ -47,3 +47,12 @@ header.l-header nav .l-nav-item a {
   height: 1.3em;
   vertical-align: text-bottom;
 }
+
+@media only screen and (max-width: 500px) {
+  header.l-header nav .l-nav-item {
+    padding: 5px;
+  }
+  header.l-header {
+    padding: 20px 10px;
+  }
+}

@@ -9,13 +9,17 @@
 
     <div class="o-homeform-content">
         <form action="{{config.extra.submit_url}}" method="post" id="long-url-form" autocomplete="off">
-            <input id="long-url-input" type="text" name="long_url" placeholder="Paste long url."/>
-            <button type="submit">
-                <i class="material-icons">add</i>
-            </button>
-            <i class="material-icons" id="long-url-paste">assignment</i>
+            <div class="input-box">
+                <input id="long-url-input" type="text" name="long_url" placeholder="Paste long url."/>
+                <button type="submit">
+                    <i class="material-icons">add</i>
+                </button>
+                <i class="material-icons" id="long-url-paste">assignment</i>
+            </div>
+            <div id="signin-message">&nbsp;</div>
         </form>
     </div>
+
 </div>
 
 {% endblock content %}
